@@ -1,0 +1,15 @@
+# Temporales y dependencias
+node_modules/
+.vercel/
+.system_generated/
+*.log
+
+# Archivos de scraping / análisis intermedio
+raw_index.html
+header.html
+footer.html
+sec_*.html
+style_*.css
+script_*.js
+*.json
+!vercel.json
