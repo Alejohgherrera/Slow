@@ -309,5 +309,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ==========================================
+  // PROJECTS CATEGORY FILTER
+  // ==========================================
+  const projectFilters = document.querySelectorAll('[data-project-filter]');
+  const projectCards = document.querySelectorAll('.slow-projects-grid__project');
+
+  if (projectFilters.length > 0 && projectCards.length > 0) {
+    projectFilters.forEach(filterBtn => {
+      filterBtn.addEventListener('click', () => {
+        const selected = filterBtn.getAttribute('data-project-filter');
+        projectFilters.forEach(btn => btn.classList.remove('is-active'));
+        filterBtn.classList.add('is-active');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-project-category');
+          if (selected === 'all' || category === selected) {
+            card.classList.remove('is-hidden');
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  }
+
   console.log('SLOW Reciclaje Textil clone initialized.');
 });
