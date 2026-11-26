@@ -2959,6 +2959,27 @@ button {
     line-height: 1.8;
   }
 
+  #slow-facebook-video .slow-facebook-video__leed {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(32, 34, 32, 0.18);
+  }
+
+  #slow-facebook-video .slow-facebook-video__leed h3 {
+    margin: 0 0 10px;
+    color: #202220;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  #slow-facebook-video .slow-facebook-video__leed p {
+    margin: 0;
+    color: #686661;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
   #slow-facebook-video .slow-facebook-video__button {
     display: inline-flex;
     align-items: center;
