@@ -213,9 +213,9 @@ button {
  
     width: auto;
  
-    max-width: 120px;
+    max-width: 180px;
  
-    max-height: 48px;
+    max-height: 64px;
  
     object-fit: contain;
  
@@ -883,7 +883,7 @@ button {
  
     .slow-lovable-header__logo-img {
  
-      max-width: 100px;
+      max-width: 140px;
  
     }
  
@@ -2891,6 +2891,121 @@ button {
 
   }
 
+
+  #slow-facebook-video {
+    width: 100%;
+    padding: 64px 24px;
+    background: #efede7;
+  }
+
+  #slow-facebook-video .slow-facebook-video__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(40px, 7vw, 88px);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  #slow-facebook-video .slow-facebook-video__media {
+    width: 100%;
+  }
+
+  #slow-facebook-video .slow-facebook-video__embed {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background: #202220;
+  }
+
+  #slow-facebook-video .slow-facebook-video__embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  #slow-facebook-video .slow-facebook-video__content {
+    max-width: 520px;
+  }
+
+  #slow-facebook-video .slow-facebook-video__eyebrow {
+    display: block;
+    margin-bottom: 16px;
+    color: #686661;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  #slow-facebook-video .slow-facebook-video__heading {
+    margin: 0 0 20px;
+    color: #202220;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.05;
+  }
+
+  #slow-facebook-video .slow-facebook-video__description {
+    margin: 0;
+    color: #686661;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  #slow-facebook-video .slow-facebook-video__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55px;
+    padding: 0 30px;
+    border: 1px solid #202220;
+    background: #202220;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.20em;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  #slow-facebook-video .slow-facebook-video__button:hover {
+    background: transparent;
+    color: #202220;
+  }
+
+  @media screen and (max-width: 749px) {
+    #slow-facebook-video {
+      padding: 48px 16px;
+    }
+
+    #slow-facebook-video .slow-facebook-video__inner {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 36px;
+    }
+
+    #slow-facebook-video .slow-facebook-video__media {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    #slow-facebook-video .slow-facebook-video__content {
+      text-align: center;
+    }
+
+    #slow-facebook-video .slow-facebook-video__heading {
+      font-size: 38px;
+    }
+  }
 
 
 /* ==================== STYLE 11 ==================== */
