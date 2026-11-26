@@ -2,6 +2,41 @@
  * SLOW RECICLAJE TEXTIL - CLONE SCRIPT
  */
 
+if (!window.__slowWhatsAppTrackingInstalled) {
+  window.__slowWhatsAppTrackingInstalled = true;
+
+  const whatsappHosts = new Set([
+    'wa.me',
+    'api.whatsapp.com',
+    'web.whatsapp.com',
+    'www.whatsapp.com',
+    'whatsapp.com'
+  ]);
+
+  document.addEventListener('click', (event) => {
+    const clickedElement = event.target instanceof Element ? event.target : null;
+    const link = clickedElement ? clickedElement.closest('a[href]') : null;
+    if (!link) return;
+
+    const destination = new URL(link.href, window.location.href);
+    if (!whatsappHosts.has(destination.hostname.toLowerCase())) return;
+
+    const linkText = (link.innerText || link.textContent || '')
+      .replace(/\s+/g, ' ')
+      .trim() || link.getAttribute('aria-label') || link.title || '';
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'whatsapp_click',
+      link_url: destination.href,
+      link_text: linkText,
+      page_url: window.location.href,
+      element_id: link.id || null,
+      element_classes: link.getAttribute('class') || ''
+    });
+  }, true);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Elements
   const header = document.querySelector('[data-slow-header]');
